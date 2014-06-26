@@ -8,6 +8,6 @@ package com.sirma.itt.javacourse.regex.greedyregex;
 public class Replacer {
 
 	public static String replace(String input) {
-		return input.replaceAll("<x>[^<x>|</x>]+</x>", "<x/>");
+		return input.replaceAll("<x>[^<x>|</x>]+?</x>", "<x/>");
 	}
 }

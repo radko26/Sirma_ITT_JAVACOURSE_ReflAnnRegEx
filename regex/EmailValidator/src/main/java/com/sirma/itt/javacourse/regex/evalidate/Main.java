@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		String a = "aas@aekaterina";
+		String a = "3aas@aekaterina";
 		System.out.println(Validator.isValid(a));
 
 	}
