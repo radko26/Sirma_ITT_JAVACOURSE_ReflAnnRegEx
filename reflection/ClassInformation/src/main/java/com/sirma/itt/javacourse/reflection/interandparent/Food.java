@@ -11,7 +11,10 @@ public class Food {
 	protected int quantity;
 	protected boolean sweet;
 	protected int healthiness;
-
+	
+	/**
+	 * Decrease the quantity of food available.
+	 */
 	protected void eatIt() {
 		quantity--;
 	}
