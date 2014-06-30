@@ -13,18 +13,13 @@ public class ValidatorTest {
 	private InputStream inputStream;
 	private BufferedReader reader;
 
-	/**
-	 * Reads from a file that contains valid e-mails.
-	 */
-	@Test
-	public void testIsValidWithValidData() {
+	private void testIsValid(String source, boolean result) {
 		try {
-			inputStream = this.getClass()
-					.getResourceAsStream("/testsValid.txt");
+			inputStream = this.getClass().getResourceAsStream(source);
 			reader = new BufferedReader(new InputStreamReader(inputStream));
 			String line = null;
 			while ((line = reader.readLine()) != null) {
-				assertEquals(true, Validator.isValid(line));
+				assertEquals(result, Validator.isValid(line));
 			}
 		} catch (Exception e) {
 			System.out.println("File not found!");
@@ -41,29 +36,19 @@ public class ValidatorTest {
 	}
 
 	/**
+	 * Reads from a file that contains valid e-mails.
+	 */
+	@Test
+	public void testIsValidWithValidData() {
+		testIsValid("/testsValid.txt", true);
+	}
+
+	/**
 	 * Reads from a file that contains invalid e-mails.
 	 */
 	@Test
 	public void testIsValidWithWrongData() {
-		try {
-			inputStream = getClass().getResourceAsStream("/testsInvalid.txt");
-			reader = new BufferedReader(new InputStreamReader(inputStream));
-			String line = null;
-			while ((line = reader.readLine()) != null) {
-				assertEquals(false, Validator.isValid(line));
-			}
-		} catch (Exception e) {
-			System.out.println("File not found!");
-			System.exit(1);
-		} finally {
-			try {
-				inputStream.close();
-				reader.close();
-			} catch (IOException e) {
-				System.out.println("Error closing");
-				System.exit(1);
-			}
-		}
+		testIsValid("/testsInvalid.txt", false);
 	}
 
 }

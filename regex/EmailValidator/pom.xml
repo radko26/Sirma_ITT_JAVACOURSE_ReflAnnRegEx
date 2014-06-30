@@ -7,7 +7,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>emailvalidator</artifactId>
-	<name>EmailValidator</name>
+	<name>emailvalidator</name>
 	<description>Module for validating an email adress</description>
 
 </project>

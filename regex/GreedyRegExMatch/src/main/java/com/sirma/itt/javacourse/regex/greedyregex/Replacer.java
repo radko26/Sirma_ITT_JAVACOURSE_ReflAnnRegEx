@@ -1,5 +1,7 @@
 package com.sirma.itt.javacourse.regex.greedyregex;
 
+import java.util.regex.Pattern;
+
 /**
  * Replace the information between {<x> </x>}tags with other info.
  * 
@@ -7,7 +9,9 @@ package com.sirma.itt.javacourse.regex.greedyregex;
  */
 public class Replacer {
 
+	private static Pattern PATTERN = Pattern.compile("<x>[^<x>|</x>]+?</x>");
+	
 	public static String replace(String input) {
-		return input.replaceAll("<x>[^<x>|</x>]+?</x>", "<x/>");
+		return PATTERN.matcher(input).replaceAll("<x/>");
 	}
 }

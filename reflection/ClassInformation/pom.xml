@@ -6,6 +6,6 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>classinformation</artifactId>
-  <name>ClassInformation</name>
+  <name>classinformation</name>
   <description>Class which reads and prints information about a class object</description>
 </project>

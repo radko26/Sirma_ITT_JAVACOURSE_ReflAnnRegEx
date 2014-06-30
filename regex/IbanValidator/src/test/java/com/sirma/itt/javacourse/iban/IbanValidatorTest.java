@@ -22,8 +22,6 @@ public class IbanValidatorTest {
 	private InputStream output;
 	private BufferedReader readerInput;
 	private BufferedReader readerOutput;
-	private ArrayList<String> inputText;
-	private ArrayList<String> outputText;
 
 	/**
 	 * Initializes variables
@@ -47,24 +45,19 @@ public class IbanValidatorTest {
 	 */
 	@Test
 	public void testGetValid() {
-		inputText = new ArrayList<String>();
-		outputText = new ArrayList<String>();
 		String inputLine = "";
 		String outputLine = "";
 		while (true) {
 			try {
 				inputLine = readerInput.readLine();
-				inputText.add(inputLine);
 				outputLine = readerOutput.readLine();
-				outputText.add(outputLine);
 			} catch (IOException e) {
 				System.out.println("Error reading input file");
 			}
 			if (inputLine == null) {
 				break;
 			}
-			assertEquals(true,
-					outputText.equals(IbanValidator.getValid(inputText)));
+			assertEquals(outputLine, IbanValidator.makeValid(inputLine));
 		}
 	}
 }
