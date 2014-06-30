@@ -18,14 +18,30 @@ public class InfoClass {
 		TYPE = 0;
 	}
 
+	/**
+	 * Getter for foodCount.
+	 * 
+	 * @return foodCount variable.
+	 */
 	public int getFoodCount() {
 		return foodCount;
 	}
-	
-	private int getTYPE(){
+
+	/**
+	 * Getter for TYPE
+	 * 
+	 * @return type of the food.
+	 */
+	private int getTYPE() {
 		return TYPE;
 	}
 
+	/**
+	 * Setter for quantity
+	 * 
+	 * @param quantity
+	 *            the quantity of the food.
+	 */
 	public void setFoodQuantity(int quantity) {
 		this.quantity = quantity;
 	}

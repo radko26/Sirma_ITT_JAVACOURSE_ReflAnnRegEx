@@ -1,6 +1,7 @@
 package com.sirma.itt.javacourse.reflection.objectannotation;
 
 /**
+ * Cheese example class
  * 
  * @author radoslav
  */

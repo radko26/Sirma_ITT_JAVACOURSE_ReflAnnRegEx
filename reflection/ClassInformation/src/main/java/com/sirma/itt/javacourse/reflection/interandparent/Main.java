@@ -1,6 +1,7 @@
 package com.sirma.itt.javacourse.reflection.interandparent;
 
 /**
+ * Main to run it.
  * 
  * @author radoslav
  */

@@ -5,7 +5,7 @@
     <artifactId>reflection</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>ClassInformation</artifactId>
+  <artifactId>classinformation</artifactId>
   <name>ClassInformation</name>
   <description>Class which reads and prints information about a class object</description>
 </project>

@@ -6,14 +6,17 @@ package com.sirma.itt.javacourse.reflection.interandparent;
  * @author radoslav
  */
 public class Bread extends Food implements IFood {
+	/**
+	 * What to do before inserting. {@inheritDoc}
+	 */
 	public void insertFoodIntoTheFridge(Object food) {
-		// what to do before inserting it
 		cutInHalf();
-
 	}
 
+	/**
+	 * What to do after taking. {@inheritDoc}
+	 */
 	public void takeFoodFromTheFridge(Object food) {
-		// what to do after taking it
 		waitToUnfreeze();
 	}
 }

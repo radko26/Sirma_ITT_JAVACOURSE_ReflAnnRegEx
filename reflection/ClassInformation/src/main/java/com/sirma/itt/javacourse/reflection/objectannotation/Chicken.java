@@ -1,6 +1,7 @@
 package com.sirma.itt.javacourse.reflection.objectannotation;
 
 /**
+ * Chicken example class.
  * 
  * @author radoslav
  */

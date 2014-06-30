@@ -12,6 +12,9 @@ public class Food {
 	protected boolean sweet;
 	protected int healthiness;
 
+	/**
+	 * Eat something and decrease the value.
+	 */
 	protected void eatIt() {
 		quantity--;
 	}

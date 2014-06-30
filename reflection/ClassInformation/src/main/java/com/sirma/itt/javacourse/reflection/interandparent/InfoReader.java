@@ -15,10 +15,18 @@ public class InfoReader {
 		interfaces = input.getInterfaces();
 	}
 
+	/**
+	 * Getter for the super class
+	 * 
+	 * @return the super class
+	 */
 	private Class getSuperclass() {
 		return input.getSuperclass();
 	}
 
+	/**
+	 * Prints the info
+	 */
 	public void printInfo() {
 		System.out.println(getSuperclass());
 		for (int i = 0; i < interfaces.length; i++) {
